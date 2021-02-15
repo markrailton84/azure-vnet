@@ -23,7 +23,7 @@ variable "tag_buildby" {
 variable "tag_buildticket" {
   type        = string
   description = "Ticket Number for the build"
-  default     = "no ticket"
+  default     = "ticket123"
 }
 
 variable "tag_builddate" {
