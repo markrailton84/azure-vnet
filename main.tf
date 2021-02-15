@@ -41,13 +41,6 @@ resource "azurerm_subnet" "sub1" {
   resource_group_name  = var.resourcegroup
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
-
-  tags = {
-  Environment = var.environment
-  BuildBy     = var.tag_buildby
-  BuildTicket = var.tag_buildticket
-  BuildDate   = var.tag_builddate
-  }
 }
 
 resource "azurerm_subnet" "sub2" {
@@ -55,13 +48,6 @@ resource "azurerm_subnet" "sub2" {
   resource_group_name  = var.resourcegroup
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.2.0/24"]
-
-  tags = {
-  Environment = var.environment
-  BuildBy     = var.tag_buildby
-  BuildTicket = var.tag_buildticket
-  BuildDate   = var.tag_builddate
-  }
 }
 
 resource "azurerm_subnet" "sub3" {
@@ -69,11 +55,4 @@ resource "azurerm_subnet" "sub3" {
   resource_group_name  = var.resourcegroup
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.3.0/24"]
-
-  tags = {
-  Environment = var.environment
-  BuildBy     = var.tag_buildby
-  BuildTicket = var.tag_buildticket
-  BuildDate   = var.tag_builddate
-  }
 }
