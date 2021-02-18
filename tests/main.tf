@@ -24,5 +24,5 @@ source = "../"
 name = "${local.name}-vnet-${lower(random_string.enigma.result)}"
 location = var.location
 resource_group_name = var.resource_group
-depends_on = [azurerm_resource_group.resource_group]
+#depends_on = [azurerm_resource_group.resource_group]
 }
