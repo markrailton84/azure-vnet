@@ -4,7 +4,7 @@ variable "location" {
   description = "Location of the resources"
 }
 
-variable "resource_group" {
+variable "resource_group_name" {
     type = string
     description = "static rsg"
 } 
