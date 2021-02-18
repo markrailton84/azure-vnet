@@ -7,11 +7,6 @@ terraform {
   }
 }
 
-resource "random_string" "enigma" {
-  length  = 6
-  special = false
-}
-
 resource "azurerm_resource_group" "resource_group" {
  name = var.resource_group_name
  location = var.location
