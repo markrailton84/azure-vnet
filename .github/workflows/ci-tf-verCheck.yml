@@ -1,4 +1,4 @@
-name: Terraform - Plan Dir
+name: Terraform - VersionChecker
 # sandbox environment  
 # clientId: 2cf1bd32-a491-49c7-8877-c1c4ab7bdbd7
 # secret: ${{secrets.TF_ARM_CLIENT_SECRET}}
