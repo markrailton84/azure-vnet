@@ -3,7 +3,7 @@ terraform {
     resource_group_name  = "rg-azure-tf"
     storage_account_name = "saazuretf"
     container_name       = "terraform-state"
-    key                  = "terraform-vnet.tfstate"
+    key                  = "module-vnet-tests.tfstate"
   }
 }
 
