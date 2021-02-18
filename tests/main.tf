@@ -21,6 +21,7 @@ resource "azurerm_resource_group" "resource_group" {
 module "vnet_testing" {
 source = "../"
 name = var.name
+ddos_name = var.ddos_name
 location = var.location
 resource_group_name = var.resource_group_name
 depends_on = [azurerm_resource_group.resource_group]
