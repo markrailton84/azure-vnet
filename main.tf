@@ -1,7 +1,7 @@
 resource "azurerm_network_ddos_protection_plan" "ddos" {
   name                = "${local.name}-ddos-${lower(random_string.enigma.result)}"
   location            = var.location
-  resource_group_name = var.resourcegroup
+  resource_group_name = var.resource_group_name
   
   tags = {
     Environment = var.environment
@@ -14,7 +14,7 @@ resource "azurerm_network_ddos_protection_plan" "ddos" {
 resource "azurerm_virtual_network" "vnet" {
   name                = var.name
   location            = var.location
-  resource_group_name = var.resourcegroup
+  resource_group_name = resource_group_name
   address_space       = ["10.0.0.0/16"]
   dns_servers         = ["10.0.0.4", "10.0.0.5"]
 
