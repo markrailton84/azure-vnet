@@ -1,10 +1,18 @@
-resource "random_string" "enigma" {
-  length  = 6
-  special = false
+resource "azurerm_network_ddos_protection_plan" "ddos" {
+  name                = "${local.name}-ddos-${lower(random_string.enigma.result)}"
+  location            = var.location
+  resource_group_name = var.resourcegroup
+  
+  tags = {
+    Environment = var.environment
+    BuildBy     = var.tag_buildby
+    BuildTicket = var.tag_buildticket
+    BuildDate   = var.tag_builddate
+  }
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "${local.name}-vnet-${lower(random_string.enigma.result)}"
+  name                = var.name
   location            = var.location
   resource_group_name = var.resourcegroup
   address_space       = ["10.0.0.0/16"]

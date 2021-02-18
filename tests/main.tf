@@ -13,7 +13,7 @@ resource "random_string" "enigma" {
 }
 
 resource "azurerm_resource_group" "resource_group" {
- name = "${local.name}-rsg-${lower(random_string.enigma.result)}"
+ name = var.resource_group_name
  location = var.location
 }
 
@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "resource_group" {
 
 module "vnet_testing" {
 source = "../"
-name = "${local.name}-vnet-${lower(random_string.enigma.result)}"
+name = var.name
 location = var.location
 resource_group_name = var.resource_group
 #depends_on = [azurerm_resource_group.resource_group]
