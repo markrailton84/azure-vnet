@@ -1,15 +1,12 @@
 # Base variables
-
 variable "location" {
   type        = string
   description = "Location of the resources"
-  default     = "UK South"
 }
 
 variable "resource_group" {
     type = string
     description = "static rsg"
-    default = "markrsg"
 } 
 
 # Tag variables
