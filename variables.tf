@@ -1,4 +1,9 @@
 # Base variables
+variable "ddos_name" {
+  type        = string
+  description = "name of resources"
+}
+
 variable "name" {
   type        = string
   description = "name of resources"
