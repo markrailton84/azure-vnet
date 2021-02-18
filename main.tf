@@ -1,16 +1,3 @@
-resource "azurerm_network_ddos_protection_plan" "ddos" {
-  name                = "${local.name}-ddos-${lower(random_string.enigma.result)}"
-  location            = var.location
-  resource_group_name = var.resource_group_name
-  
-  tags = {
-    Environment = var.environment
-    BuildBy     = var.tag_buildby
-    BuildTicket = var.tag_buildticket
-    BuildDate   = var.tag_builddate
-  }
-}
-
 resource "azurerm_virtual_network" "vnet" {
   name                = var.name
   location            = var.location
