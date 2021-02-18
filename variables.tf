@@ -1,4 +1,8 @@
 # Base variables
+variable "name" {
+  type        = string
+  description = "name of resources"
+}
 
 variable "location" {
   type        = string
